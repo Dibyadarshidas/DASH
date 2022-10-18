@@ -1,13 +1,122 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Noto+Sans+Mono&display=swap');
+:root{
+    --primary-font : 'Bungee Spice', cursive;
+    --secondary-font : 'Noto Sans Mono', monospace;
+    --primary-color: #000 ;
+    --secondary-color: orange ;
+    --accent-color: grey;
+    --font-color : #fff;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,*::after,*::before
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-family: var(--secondary-font);
+    color: var(--font-color);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--primary-font);
+}
+a{
+    color: var(--font-color);
+    text-decoration: none;
+}
+/* ScrollBar */
+html{
+    scrollbar-width: normal;
+}
+html::-webkit-scrollbar{
+    width: 4px;
+    height: 4px;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: var(--accent-color);
+    height: 4px;
+    border-radius: 16px;
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);;
+}
+html::-webkit-scrollbar-track{
+    background: linear-gradient( 90deg,#434343,#434343 1px,#111 0,#111) ;
+}
+/* Header */
+.logoBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 6em;
+    margin: 4px auto;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+nav>*{
+    border-bottom: 2px solid transparent;
+}
+nav>*:hover{
+border-bottom: 2px solid white;
+}
+/* Footer */
+footer{
+background: var(--accent-color);    
+/* position: fixed;
+bottom: 0;
+left: 0;
+right: 0; */
+display: flex;
+justify-content: space-between;
+padding: 0 60px;
+}
+footer img{
+    width: 3em;
+}
+footer i {
+    width: 2em;
+}
+.social, .brand{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.brand img{
+    margin: 0 20px;
+}
+/* Banner */
+.banner{
+    background: url("./img/group.jpg");
+    background-size: cover;
+    background-position: 0% 40%;
+    height: 80vh;
+    width: 100%;
+    margin: 40px 0;
+}
+/* Block */
+.title{
+    text-align: center;
+    font-size: 40px;
+}
+/* Card */
+.block{
+    margin: 40px 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 45px;
+}
+.card{
+    width: 100%;
+    height: 200px;
+    background: whitesmoke;
+}
+.bar{
+    color: #000;
 }
